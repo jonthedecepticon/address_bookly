@@ -6,9 +6,11 @@
     <%= link_to 'Address book', root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <%= 'active' if current_page?(new_contact_path) %>">
-          <%= link_to 'New Contact', new_contact_path, class: "nav-link" %>
-        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item <%= 'active' if current_page?(new_contact_path) %>">
+            <%= link_to 'New Contact', new_contact_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
       <% if user_signed_in? %>
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-info my-2 my-sm-0" %>
