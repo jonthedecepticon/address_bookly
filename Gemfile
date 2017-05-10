@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -52,9 +52,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'minitest-reporters', '~> 1.1', '>= 1.1.14'
-  gem 'mini_backtrace', '~> 0.1.3'
-  gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
+  # gem 'minitest-reporters', '~> 1.1', '>= 1.1.14'
+  # gem 'mini_backtrace', '~> 0.1.3'
+  # gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
 end
 
 group :development do
@@ -68,7 +68,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '~> 0.18'
   gem 'rails_12factor'
 end
 
