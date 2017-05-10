@@ -1,10 +1,13 @@
 class ContactsController < ApplicationController
   before_action :find_contact, only: [:edit, :update, :show, :destroy]
-
   helper_method :sort_column, :sort_direction
+
   def index
-    binding.pry
-    @contacts = Contact.order(sort_column + " " + sort_direction)
+    if current_user.nil?
+      @contacts = []
+    else
+      @contacts = current_user.contacts.order(sort_column + " " + sort_direction)
+    end
   end
 
   def new

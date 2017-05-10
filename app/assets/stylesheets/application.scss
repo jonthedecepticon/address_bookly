@@ -13,9 +13,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-nav.navbar {
-  margin-bottom: 50px;
-}
 .sort-by {
   float: right;
   font-size: 10px;
@@ -39,7 +36,28 @@ nav.navbar {
   color: #a94442;
 }
 .alert-notice {
-    background-color: #dff0d8;
-    border-color: #d0e9c6;
-    color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+.h50 {
+  padding-top: 50px;
+}
+.move-over {
+  margin-right: 10px;
+}
+.actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .btn.btn-outline-success.my-2.my-sm-0 {
+    margin-right: 10px;
+  }
+  .btn.btn-outline-primary.my-2.my-sm-0 {
+    margin-right: 10px;
+  }
+  a.forgot-pass {
+    padding-top: 5px;
+  }
 }
