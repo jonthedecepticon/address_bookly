@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card card-outline-secondary">
+        <div class="card">
+          <div class="card-header">
+            <%= @contact.name %>
+          </div>
+          <div class="card-block">
+            <h4 class="card-title"><%= @contact.phone %></h4>
+            <p class="card-text"><%= @contact.email %></p>
+            <p class="card-text"><%= @contact.address %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'Edit', edit_contact_path(@contact), class: 'btn btn-outline-info my-2 my-sm-0' %>
+            <%= link_to 'Destroy', contact_path(@contact), method: :delete, class: 'btn btn-outline-danger my-2 my-sm-0', data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

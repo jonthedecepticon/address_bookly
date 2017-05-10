@@ -1,0 +1,26 @@
+<h1 class="text-center">Contacts List</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each_with_index do |contact, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= contact.name %></td>
+        <td><%= mail_to "#{contact.email}" %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.address %></td>
+        <td class="text-center"><%= link_to 'View', contact_path(contact), class: 'btn btn-outline-primary my-2 my-sm-0' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
