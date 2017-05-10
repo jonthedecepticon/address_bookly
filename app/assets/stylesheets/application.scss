@@ -11,7 +11,25 @@
  * It is generally better to create a new file per style scope.
  */
 @import "bootstrap";
+@import "font-awesome";
 
 nav.navbar {
   margin-bottom: 50px;
+}
+.sort-by {
+  float: right;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.current.asc:before {
+  font-family: FontAwesome;
+  content: "\f0d8";
+  margin-right: 3px;
+  color: black;
+}
+.current.desc:before {
+  font-family: FontAwesome;
+  content: "\f0d7";
+  margin-right: 3px;
+  color: black;
 }

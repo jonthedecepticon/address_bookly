@@ -28,6 +28,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'pry', '~> 0.10.4'
 gem 'awesome_print', '~> 1.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

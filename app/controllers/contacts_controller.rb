@@ -1,8 +1,9 @@
 class ContactsController < ApplicationController
   before_action :find_contact, only: [:edit, :update, :show, :destroy]
 
+  helper_method :sort_column, :sort_direction
   def index
-    @contacts = Contact.all
+    @contacts = Contact.order(sort_column + " " + sort_direction)
   end
 
   def new
@@ -44,5 +45,13 @@ class ContactsController < ApplicationController
 
     def find_contact
       @contact = Contact.find(params[:id])
+    end
+
+    def sort_column
+      %w[name].include?(params[:sort]) ? params[:sort] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
