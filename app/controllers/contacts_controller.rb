@@ -3,11 +3,12 @@ class ContactsController < ApplicationController
 
   helper_method :sort_column, :sort_direction
   def index
+    binding.pry
     @contacts = Contact.order(sort_column + " " + sort_direction)
   end
 
   def new
-    @contact = Contact.new
+    @contact = current_user.contacts.build
   end
 
   def edit
@@ -22,7 +23,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contacts.build(contact_params)
     if @contact.save
       redirect_to @contact
     else

@@ -1,4 +1,6 @@
 class Contact < ApplicationRecord
+  belongs_to :user
+
   validates :name, presence: true, length: { minimum: 5 }
   validates :address, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

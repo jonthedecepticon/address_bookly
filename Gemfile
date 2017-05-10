@@ -29,6 +29,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'pry', '~> 0.10.4'
 gem 'awesome_print', '~> 1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'devise', '~> 4.2', '>= 4.2.1'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -56,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # gem 'rb-readline'
 end
 
 group :production do
