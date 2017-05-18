@@ -4,6 +4,9 @@
 .dropdown-header.menu-option {
   cursor: default;
 }
+.no-click {
+  pointer-events: none;
+}
 .alert.alert-danger, .alert.alert-success {
   position: fixed;
   top: 70px;
@@ -120,4 +123,23 @@ hr.line-divide {
 }
 .bg-grad {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3));
+}
+i.devicon-javascript-plain,
+i.devicon-react-original,
+i.devicon-jquery-plain,
+i.devicon-ruby-plain,
+i.devicon-rails-plain,
+i.devicon-postgresql-plain,
+i.devicon-photoshop-line,
+i.devicon-illustrator-line,
+i.devicon-github-plain,
+i.devicon-bootstrap-plain,
+i.devicon-atom-original,
+i.devicon-nodejs-plain,
+i.devicon-angularjs-plain,
+i.devicon-mongodb-plain, {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  font-size: 30px;
 }
