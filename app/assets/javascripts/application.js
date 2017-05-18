@@ -15,5 +15,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require now-ui-kit
+//= require turbolinks
 //= require custom
 //= require_tree .
