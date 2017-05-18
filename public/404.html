@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Cool Story Bro...</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+  body{
+      background: #666;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
   }
-
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+  .bg{
+      background: #000 url(<%= asset_path 'home-hero-img.jpg' %>);
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
   }
-
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .drops ul{
+      position: relative;
+      z-index: 1000;
   }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .drops li{
+      position: absolute;
+      z-index: 100000;
+      display: block;
+      height: 25px;
+      background: rgba(255,255,255,.03) -webkit-radial-gradient(center 75%, ellipse contain, #ffffff, rgba(255,255,255,0) 60%);
+      margin: 20px auto;
+      border-radius: 50%;
+      box-shadow: inset 0 0px 6px rgba(0,0,0,.5), inset 0 -1px 6px rgba(0,0,0,.6),  inset 0 8px 3px rgba(0,0,0,.3), inset 0 10px 3px rgba(255,255,255,.1), 0 3px 6px rgba(0,0,0,.5);
   }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+  <div class="bg"></div>
+  <ul class="drops"></ul>
 </body>
+<script type="text/javascript">
+$(function(){
+ndrops = 1000;
+addDrops();
+moveDrops()
+
+})
+function addDrops(){
+wW = $(window).width();
+WH = $(window).height();
+for(i=0; i<=ndrops; i++){
+  dp = "<li class='d" + i + "''></li>"
+  dX =  Math.floor((Math.random()*wW)+1) + "px";
+  dY =  Math.floor((Math.random()*WH)+1) + "px";
+  dS = Math.floor((Math.random()*1)+1) * 0.3;
+  dB = (Math.floor((Math.random()*2)+1) * 0.5)+ "px";
+  dO = (Math.floor((Math.random()*2)+1) * 0.5);
+  dW = "25px" //Math.floor((Math.random()*30)+30) + "px";
+  dH = Math.floor((Math.random()*20)+18) + "px";
+  //goingDown = ".d" + Math.floor((Math.random()*100)+50);
+  $("ul").append(dp);
+  $(".d" + i).css("opacity",dO).css("width",dW).css("height",dH).css({x: dX, y:dY, scale: dS});
+}
+xxx = setInterval(function(){
+  moveDrops();
+},90000);
+
+}
+function moveDrops(){
+for(i=0; i<=ndrops; i++){
+  goingDown = ".d" + Math.floor((Math.random()*100)+1);
+  $(goingDown).addClass("move").transition({y:"+=" + Math.floor((Math.random()*40)+1) + "px"},Math.floor((Math.random()*1000)+800), "ease");
+};
+</script>
 </html>
