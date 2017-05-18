@@ -3,19 +3,13 @@
     <nav>
       <ul>
         <li>
-          <a href="/">
-            About
-          </a>
+          <%= link_to "About", root_path, class: "" %>
         </li>
         <li>
-          <a href="#">
-            Contact
-          </a>
+          <%= link_to "Contact", static_pages_contact_path, class: "" %>
         </li>
         <li>
-          <a href="#">
-            Portfolio
-          </a>
+          <%= link_to "Portfolio", static_pages_coming_soon_path, class: "" %>
         </li>
       </ul>
     </nav>

@@ -9,8 +9,8 @@
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-header menu-option">MENU</a>
         <%= link_to "About", root_path, class: "dropdown-item" %>
-        <%= link_to "Contact", "#", class: "dropdown-item" %>
-        <%= link_to "Portfolio", "#", class: "dropdown-item" %>
+        <%= link_to "Contact", static_pages_contact_path, class: "dropdown-item" %>
+        <%= link_to "Portfolio", static_pages_coming_soon_path, class: "dropdown-item" %>
         <% if user_signed_in? %>
           <div class="dropdown-divider"></div>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
@@ -26,7 +26,7 @@
         <span class="navbar-toggler-bar bar2"></span>
         <span class="navbar-toggler-bar bar3"></span>
       </button>
-      <a class="navbar-brand no-click" href="/">
+      <a class="navbar-brand" href="/">
         Jon Lambson
       </a>
     </div>
