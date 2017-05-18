@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* body */
+$font_family : 'Lato', Calibri, Arial, sans-serif;
+$main_font_color: #ffffff;
+
+/* playing cards */
+$heart_col: #ff0000;
+$diamond_col: #ff0000;
+$club_col: #000000;
+$spade_col: #000000;
+
+$card_bg_col: #ffffff;
+$card_height: 285px;
+$card_width: 175px;
+$card_padding: 3px;
+
+$card_back_bg_col: #F9BA15;
+$card_back_border: 5px solid #ffffff;
+
+.container .card1, .container .card {
+  display: inline-block;
+}
+
+.club {color: $club_col;}
+.diamond {color: $diamond_col;}
+.spade {color: $spade_col;}
+.heart {color: $heart_col;}
+
+/* no value cards */
+.card1 {
+  width: $card_width;
+  height: $card_height;
+  background-color: $card_bg_col;
+  border-radius: 5px;
+  font-size: 50px;
+  padding-top: 15px;
+}
+
+.card1.heart::before {content:'\2665'}
+.card1.diamond::before {content:'\2666'}
+.card1.spade::before {content:'\2660'}
+.card1.club::before {content:'\2663'}
+
+/* regular cards */
+.card {
+  width: $card_width;
+  height: $card_height;
+  background-color: $card_bg_col;
+  border-radius: 7%;
+  font-size: 20px;
+  position: relative;
+}
+.card div {
+  position: absolute;
+}
+.top {
+  left: 7px;
+  top: 2px;
+}
+.bottom {
+  bottom: 2px;
+  right: 7px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.suit {
+  top: 17px;
+}
+.heart .suit::before {content:'\2665'}
+.diamond .suit::before {content:'\2666'}
+.spade .suit::before {content:'\2660'}
+.club .suit::before {content:'\2663'}
+.v1 .number::before {content:'A'}
+.v2 .number::before {content:'2'}
+.v3 .number::before {content:'3'}
+.v4 .number::before {content:'4'}
+.v5 .number::before {content:'5'}
+.v6 .number::before {content:'6'}
+.v7 .number::before {content:'7'}
+.v8 .number::before {content:'8'}
+.v9 .number::before {content:'9'}
+.v10 .number::before {content:'10'}
+.v11 .number::before {content:'J'}
+.v12 .number::before {content:'Q'}
+.v13 .number::before {content:'K'}
+.card.back {
+  /* add style here! :D */
+  background-color: $card_back_bg_col;
+  border: $card_back_border;
+  background-image:url(http://media-cache-cd0.pinimg.com/736x/7c/45/dd/7c45dda8921194dca4e68359dacf813a.jpg)
+}
+h1 {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+}
+.card-block {
+  width: 20%;
+  margin: 0 auto;
+}
+.card-container {
+  min-height: 79px;
+  height: 384px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+}
+.card-container h2, .card-container h4 {
+  text-align: center;
+}
+.card-container h2 {
+  padding-top: 38px;
+  font-size: 38px;
+}
+.card-container h4 {
+  font-size: 22px;
+}
+.row-centered {
+  text-align: center;
+}
+.btn {
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.play-war {
+  text-align: center;
+  bottom: 250px;
+  position: relative;
+  z-index: 9;
+}
+.-card_game-war .drop-it {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.drop-it {
+  padding-top: 150px;
+}
+.container.card-cont {
+  width: 50%;
+}
+.footer ul li a {
+  color: black;
+}
+h1.who {
+  padding-top: 100px;
+  padding-left: 15px;
+}

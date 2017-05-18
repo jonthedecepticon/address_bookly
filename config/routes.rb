@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'card_game/war'
+
   get 'static_pages/portfolio'
   get 'static_pages/coming_soon'
   get 'static_pages/contact'

@@ -1,0 +1,33 @@
+<div class="page-header" filter-color="orange">
+  <div class="page-header-image" style="background-image:url(<%= asset_path 'mtns.jpg' %>)"></div>
+  <div class="container card-cont">
+    <div class="drop-it">
+      <div class="card-count text-info">Cards remaining: <span class="text-warning" id="opp-card-count"></span></div>
+      <div class="card" id="card-id-player1">
+        <div class="top">
+          <div class="number"></div>
+          <h1 class="who">You</h1>
+          <div class="suit"></div>
+        </div>
+        <div class="bottom">
+          <div class="number"></div>
+          <div class="suit"></div>
+        </div>
+      </div>
+      <div class="card" id="card-id-player2">
+        <div class="top">
+          <div class="number"></div>
+          <div class="suit"></div>
+        </div>
+        <div class="bottom">
+          <div class="number"></div>
+          <div class="suit"></div>
+        </div>
+      </div>
+      <div class="card-count text-info">Cards remaining: <span class="text-warning" id="my-card-count"></span></div>
+    </div>
+  </div>
+  <div class="row play-war">
+    <button class="btn btn-primary btn-round btn-lg">Play!</button>
+  </div>
+</div>
