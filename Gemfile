@@ -30,6 +30,8 @@ gem 'pry', '~> 0.10.4'
 gem 'awesome_print', '~> 1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'jquery-turbolinks'
+gem 'turbolinks', '~> 5.0', '>= 5.0.1'
 
 
 # Use jquery as the JavaScript library
@@ -43,7 +45,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'turbolinks', '~> 5.0', '>= 5.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
