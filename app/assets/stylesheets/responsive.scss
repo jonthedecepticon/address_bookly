@@ -1,0 +1,22 @@
+@media (max-width: 1025px) {
+  .col-md-12.offset-md-2.move-left {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 769px) {
+  .hide-menu, .mobile-sd-title {
+    display: block;
+  }
+  .navbar-brand {
+    pointer-events: none;
+  }
+  .col-md-12.offset-md-2.move-left {
+      margin-left: -30px;
+  }
+}
+
+@media (max-width: 376px) {
+  [class*="navbar-toggleable-"] .navbar-collapse {
+      width: 200px;
+  }
+}

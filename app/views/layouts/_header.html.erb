@@ -10,7 +10,7 @@
         <a class="dropdown-header menu-option">MENU</a>
         <%= link_to "About", root_path, class: "dropdown-item" %>
         <%= link_to "Contact", static_pages_contact_path, class: "dropdown-item" %>
-        <%= link_to "Portfolio", static_pages_coming_soon_path, class: "dropdown-item" %>
+        <%= link_to "Resume", static_pages_resume_path, class: "dropdown-item" %>
         <% if user_signed_in? %>
           <div class="dropdown-divider"></div>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
@@ -32,6 +32,18 @@
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="">
       <ul class="navbar-nav">
+        <div class="hide-menu">
+          <li class="nav-item">
+            <%= link_to "About", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", static_pages_contact_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Resume", static_pages_resume_path, class: "nav-link" %>
+          </li>
+          <hr class="line-divide">
+        </div>
         <li class="nav-item">
           <a class="nav-link" rel="tooltip" title="Follow me on Twitter" data-placement="bottom" href="https://twitter.com/jonlambsonite" target="_blank">
             <i class="fa fa-twitter"></i>
@@ -48,6 +60,12 @@
           <a class="nav-link" rel="tooltip" title="Follow me on Instagram" data-placement="bottom" href="https://www.instagram.com/jon.lambsonite/" target="_blank">
             <i class="fa fa-instagram"></i>
             <p class="hidden-lg-up">Instagram</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Follow me on Github" data-placement="bottom" href="https://github.com/jonthedecepticon" target="_blank">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
+            <p class="hidden-lg-up">Github</p>
           </a>
         </li>
       </ul>

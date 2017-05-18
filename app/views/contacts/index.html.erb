@@ -24,13 +24,16 @@
     <div class="section">
       <div class="container">
         <div class="button-container">
-          <a href="/static_pages/resume" class="btn btn-primary btn-round btn-lg">Resume</a>
-          <a href="https://www.facebook.com/jon.lambson" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
+          <a href="/static_pages/resume" class="btn btn-primary btn-round btn-lg">Checkout My Resume</a>
+          <!-- <a href="https://www.facebook.com/jon.lambson" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
             <i class="fa fa-facebook"></i>
           </a>
           <a href="https://www.instagram.com/jon.lambsonite/" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
             <i class="fa fa-instagram"></i>
           </a>
+          <a href="https://github.com/jonthedecepticon" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a> -->
         </div>
         <div class="move-down">
           <h3 class="title">About me</h3>
@@ -40,6 +43,72 @@
           </h5>
         </div>
         <div class="row">
+          <div class="col-md-6 offset-md-3 panetab">
+            <h4 class="title text-center">My Portfolio</h4>
+            <div class="nav-align-center">
+              <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#page1" role="tablist">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content gallery">
+            <div class="tab-pane active" id="page1" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12 offset-md-2 move-left">
+                  <div class="row collections">
+                    <div class="col-md-6 side-projects-2by2">
+                      <a href="/static_pages/coming_soon">
+                        <div class="box">
+                          <%= image_tag "bg4.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center">Side Project #1</h3>
+                          <p>This will be a brief description of what the side project is...</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #1</a></p>
+                      <a href="/static_pages/coming_soon">
+                        <div class="box">
+                          <%= image_tag "bg3.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center">Side Project #3</h3>
+                          <p>This will be a brief description of what the side project is...</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #3</a></p>
+                    </div>
+                    <div class="col-md-6 side-projects-2by2">
+                      <a href="/static_pages/coming_soon">
+                        <div class="box">
+                          <%= image_tag "bg8.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center">Side Project #2</h3>
+                          <p>This will be a brief description of what the side project is...</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #2</a></p>
+                      <a href="/static_pages/coming_soon">
+                        <div class="box">
+                          <%= image_tag "bg7.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center">Side Project #4</h3>
+                          <p>This will be a brief description of what the side project is...</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #4</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
