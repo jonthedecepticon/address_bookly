@@ -6,7 +6,6 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
   </head>
 
   <body class="<%= request.path_info.gsub('/','-') %>">
@@ -17,15 +16,17 @@
   </body>
 
   <script type="text/javascript">
-  $(document).ready(function() {
-    // nowuiKit.initSliders();
-  });
-  function scrollToDownload() {
-    if ($('.section-download').length != 0) {
-      $("html, body").animate({
-        scrollTop: $('.section-download').offset().top
-      }, 1000);
-    }
-  }
+      $(document).ready(function() {
+          // nowuiKit.initSliders();
+      });
+
+      function scrollToDownload() {
+
+          if ($('.section-download').length != 0) {
+              $("html, body").animate({
+                  scrollTop: $('.section-download').offset().top
+              }, 1000);
+          }
+      }
   </script>
 </html>
