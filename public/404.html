@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Cool Story Bro...</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style media="screen">
       body{
@@ -52,7 +53,7 @@
       }
       .hit-the-floor-2 {
         color: #fff;
-        font-size: 5em;
+        font-size: 3em;
         font-weight: bold;
         font-family: Helvetica;
         text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
@@ -62,15 +63,18 @@
       }
       .hit-the-floor {
         position: absolute;
-        z-index: 999999;
+        z-index: 12;
         top: 150px;
         width: 100%;
       }
       .hit-the-floor-2 {
         position: absolute;
-        z-index: 999999;
-        top: 250px;
+        z-index: 12;
+        top: 300px;
         width: 100%;
+      }
+      a#homeward-bound {
+        color: white;
       }
     </style>
   </head>
@@ -78,7 +82,7 @@
   <body>
     <div class="bg"></div>
     <div class="hit-the-floor">404 Page Not Found</div>
-    <div class="hit-the-floor-2"><a href="/" id="homeward-bound">Take me home</a></div>
+    <div class="hit-the-floor-2"><a href="/" id="homeward-bound"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Take me back home</a></div>
     <ul class="drops"></ul>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
