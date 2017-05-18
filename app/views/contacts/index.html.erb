@@ -1,41 +1,47 @@
-<% if user_signed_in? && current_user.contacts.size > 0 %>
-  <h1 class="text-center">Contacts List</h1>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name <span class="sort-by"><%= sortable "name", "sort alphabetically" %></span></th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Address</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-        <% @contacts.each_with_index do |contact, index| %>
-          <tr>
-            <th scope="row"><%= index + 1 %></th>
-            <td><%= contact.name %></td>
-            <td><%= mail_to "#{contact.email}" %></td>
-            <td><%= contact.phone %></td>
-            <td><%= contact.address %></td>
-            <td class="text-center"><%= link_to 'View', contact_path(contact), class: 'btn btn-outline-primary my-2 my-sm-0' %></td>
-          </tr>
-        <% end %>
-    </tbody>
-  </table>
-<% else %>
-  <div class="jumbotron">
-    <h1 class="display-3 text-center">Get Started!</h1>
-    <p class="lead">Fames distinctio fermentum phasellus, voluptatem sapien class, laboris tincidunt ipsa consectetuer reiciendis. Voluptas leo, proin, luctus, placeat potenti odio dolorem voluptatem veniam consequatur. Senectus imperdiet.</p>
-    <hr class="my-2">
-    <p>Montes proin libero consectetuer ante! Beatae temporibus excepteur nemo turpis pharetra a cumque accusamus, eget nostrum? Tellus autem libero eaque vero minus! Erat cupidatat egestas.</p>
-    <p class="lead text-center">
-      <% if user_signed_in? %>
-        <%= link_to "Add New Contact", new_contact_path, class: "btn btn-primary" %>
-      <% else %>
-        <%= link_to "Add New Contact", new_user_registration_path, class: "btn btn-primary" %>
-      <% end %>
-    </p>
+<body class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+      <div class="page-header-image" data-parallax="true" style="background-image: url(<%= asset_path 'home-hero-img.jpg' %>);">
+      </div>
+      <div class="container">
+        <div class="content-center">
+          <div class="photo-container">
+            <%= image_tag "me.jpg", class: "rounded-circle img-raised me-photo" %>
+          </div>
+          <h3 class="title">Jon Lambson</h3>
+          <p class="category">Junior Engineer</p>
+          <div class="content">
+            <div class="social-description">
+            </div>
+            <div class="social-description">
+            </div>
+            <div class="social-description">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="button-container">
+          <a href="#" class="btn btn-primary btn-round btn-lg">Portfolio</a>
+          <a href="https://www.facebook.com/jon.lambson" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/jon.lambsonite/" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+        <div class="move-down">
+          <h3 class="title">About me</h3>
+          <h5 class="description">
+            <p>Distinctio nonummy, ultrices? Consectetuer, quibusdam lacinia tristique etiam? Culpa minus omnis totam excepteur eu cillum? Ratione vel, hac impedit ipsum maxime reiciendis? Minima ex curabitur.</p>
+            <p>Distinctio nonummy, ultrices? Consectetuer, quibusdam lacinia tristique etiam? Culpa minus omnis totam excepteur eu cillum? Ratione vel, hac impedit ipsum maxime reiciendis? Minima ex curabitur.</p>
+          </h5>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
+</body>

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AddressBookly</title>
+    <title>Jon Lambson</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= request.path_info.gsub('/','-') %>">
     <%= render 'layouts/header' %>
     <%= render 'layouts/notifications' %>
-    <div class="container h50">
-      <%= yield %>
-    </div>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    nowuiKit.initSliders();
+  });
+  function scrollToDownload() {
+    if ($('.section-download').length != 0) {
+      $("html, body").animate({
+        scrollTop: $('.section-download').offset().top
+      }, 1000);
+    }
+  }
+  </script>
 </html>

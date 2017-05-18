@@ -1,0 +1,52 @@
+.dropdown-header.menu-option {
+  cursor: default;
+}
+.no-click {
+  pointer-events: none;
+}
+.alert.alert-danger, .alert.alert-success {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  z-index: 9;
+  margin-bottom: 0;
+}
+.me-photo {
+  width: 15%;
+}
+.button-container {
+  text-align: center;
+  margin-top: -100px;
+}
+.move-down {
+  text-align: center;
+  padding-top: 60px;
+}
+.w40 {
+  width: 40% !important;
+}
+.field_with_errors {
+  width: 100%;
+  input#user_email,
+  input#user_password {
+    width: 100%;
+  }
+}
+#error_explanation {
+  border-radius: 30px;
+  background-color: rgba(255, 54, 54, 0.5);
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+  margin-bottom: 10px;
+  ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+    margin-bottom: 0px;
+  }
+  h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    padding-top: 10px;
+  }
+}
