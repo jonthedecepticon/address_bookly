@@ -98,6 +98,8 @@ $(document).on('turbolinks:load', function() {
     //compare the cards
     //give the winner both cards (at end of deck)
     var play = function() {
+      $('#card-id-player1').removeClass('heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
+      $('#card-id-player2').removeClass('heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
       var p1card = cards_player_1.shift();
       var p2card = cards_player_2.shift();
       var result = war(p1card, p2card);
