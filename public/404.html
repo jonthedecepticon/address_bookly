@@ -11,7 +11,7 @@
           overflow: hidden;
       }
       .bg{
-          background: #000 url(../images/bg3.JPG);
+          /*background: #000 url(../assets/images/bg3.jpg);*/
           background-size: cover;
           position: absolute;
           top: 0;
@@ -40,10 +40,11 @@
   </head>
 
   <body>
-    <div class="bg"></div>
+    <div class="bg" style="background-image: url(<%= asset_path 'home-hero-img.jpg' %>);"></div>
     <ul class="drops"></ul>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
     <script type="text/javascript">
     $(function(){
       ndrops = 1000;
