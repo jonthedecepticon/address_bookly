@@ -1,2 +1,74 @@
-<h1>StaticPages#coming_soon</h1>
-<p>Find me in app/views/static_pages/coming_soon.html.erb</p>
+<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+
+<div class="coming-soon">
+  <h1>Coming Soon...</h1>
+  <p>Sorry still working on some projects. Check back soon!</p>
+</div>
+
+ <div id="player"></div>
+ <style media="screen">
+  html {
+    height: 100%;
+  }
+  .-static_pages-coming_soon {
+    height: 100%;
+  }
+  nav.navbar.navbar-toggleable-md.bg-primary.fixed-top.navbar-transparent {
+    background-color: black !important;
+  }
+  footer.footer.footer-default {
+    background-color: black;
+    margin-top: -10px !important;
+  }
+  footer.footer.footer-default a {
+    color: white;
+  }
+  .coming-soon {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    color: white;
+  }
+  h1  {
+    font-family: 'Grand Hotel',cursive;
+    font-size: 82px;
+  }
+  h3  {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+ </style>
+
+ <script>
+   var tag = document.createElement('script');
+   tag.src = "https://www.youtube.com/iframe_api";
+   var firstScriptTag = document.getElementsByTagName('script')[0];
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+   var player;
+   function onYouTubeIframeAPIReady() {
+     player = new YT.Player('player', {
+       height: '100%',
+       width: '100%',
+       videoId: '8Ow9eHdw11w',
+       playerVars: {rel: 0},
+       events: {
+         'onReady': onPlayerReady,
+         'onStateChange': onPlayerStateChange
+       }
+     });
+   }
+   function onPlayerReady(event) {
+     event.target.playVideo();
+     player.mute();
+   }
+   var done = false;
+   function onPlayerStateChange(event) {
+     if (event.data == YT.PlayerState.PLAYING && !done) {
+      //  setTimeout(stopVideo, 6000);
+      //  done = true;
+     }
+   }
+  //  function stopVideo() {
+  //    player.stopVideo();
+  //  }
+ </script>
