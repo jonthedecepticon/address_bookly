@@ -3,14 +3,14 @@
   <p>Sorry, I'm still building out that functionality. Check back soon!</p>
 </div>
 
- <div id="player"></div>
- <style media="screen">
+<div id="player"></div>
+<style media="screen">
   html {
     height: 100%;
-    background: gray;
   }
   .-static_pages-coming_soon {
     height: 100%;
+  background-color: gray;
   }
   nav.navbar.navbar-toggleable-md.bg-primary.fixed-top.navbar-transparent {
     background-color: black !important;
@@ -36,38 +36,38 @@
   h3  {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
- </style>
+</style>
 
- <script>
-   var tag = document.createElement('script');
-   tag.src = "https://www.youtube.com/iframe_api";
-   var firstScriptTag = document.getElementsByTagName('script')[0];
-   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-   var player;
-   function onYouTubeIframeAPIReady() {
-     player = new YT.Player('player', {
-       height: '100%',
-       width: '100%',
-       videoId: '8Ow9eHdw11w',
-       playerVars: {rel: 0},
-       events: {
-         'onReady': onPlayerReady,
-         'onStateChange': onPlayerStateChange
-       }
-     });
-   }
-   function onPlayerReady(event) {
-     event.target.playVideo();
-     player.mute();
-   }
-   var done = false;
-   function onPlayerStateChange(event) {
-     if (event.data == YT.PlayerState.PLAYING && !done) {
-      //  setTimeout(stopVideo, 6000);
-      //  done = true;
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var player;
+  function onYouTubeIframeAPIReady() {
+   player = new YT.Player('player', {
+     height: '100%',
+     width: '100%',
+     videoId: '8Ow9eHdw11w',
+     playerVars: {rel: 0},
+     events: {
+       'onReady': onPlayerReady,
+       'onStateChange': onPlayerStateChange
      }
+   });
+  }
+  function onPlayerReady(event) {
+   event.target.playVideo();
+   player.mute();
+  }
+  var done = false;
+  function onPlayerStateChange(event) {
+   if (event.data == YT.PlayerState.PLAYING && !done) {
+    //  setTimeout(stopVideo, 6000);
+    //  done = true;
    }
-  //  function stopVideo() {
-  //    player.stopVideo();
-  //  }
- </script>
+  }
+  function stopVideo() {
+  //  player.stopVideo();
+  }
+</script>
