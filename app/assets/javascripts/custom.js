@@ -60,10 +60,12 @@ $(document).on('turbolinks:load', function() {
     //create a function (algorithm) called "war" that takes two cards as parameters, compares them and returns a winner. A tie should return false.
     var war = function(card1, card2) {
       if 	(card1.number > card2.number) {
-        alert("You Lose!");
+        $('.result').addClass('fa-thumbs-o-down');
+        $('.result-text').html("Sorry... You Lose");
         return card1;
       }	else if	(card1.number < card2.number) {
-        alert("You Win!");
+        $('.result').addClass('fa-thumbs-o-up');
+        $('.result-text').html("Jolly Good, You Win!!!");
         return card2;
       }
       else {
@@ -83,7 +85,7 @@ $(document).on('turbolinks:load', function() {
           cards_player_1.push(tie1[i]);
           cards_player_1.push(tie2[i]);
         }
-        alert("You Lose DOUBLE!!")
+        $('.result-text').html("Ouch... You Lose DOUBLE!!!");
       }
       else if (tieWinner === tie2card){
         cards_player_2.push(p1card,p2card, tie1card,tie2card);
@@ -91,15 +93,15 @@ $(document).on('turbolinks:load', function() {
           cards_player_2.push(tie2[i]);
           cards_player_2.push(tie1[i]);
         }
-        alert("You Win DOUBLE!!");
+        $('.result-text').html("Wowzers... You Win DOUBLE!!!");
       }
     }
     //create a play function
     //compare the cards
     //give the winner both cards (at end of deck)
     var play = function() {
-      $('#card-id-player1').removeClass('heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
-      $('#card-id-player2').removeClass('heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
+      $('#card-id-player1').removeClass('back heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
+      $('#card-id-player2').removeClass('back heart club diamond spade v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11 v12 v13');
       var p1card = cards_player_1.shift();
       var p2card = cards_player_2.shift();
       var result = war(p1card, p2card);
@@ -118,6 +120,8 @@ $(document).on('turbolinks:load', function() {
       if (cards_player_1.length) {
         var card_1 = cards_player_1[0];
         var card_2 = cards_player_2[0];
+        var opp = cards_player_1.length;
+        var you = cards_player_2.length;
         $("#opp-card").html(convert_value_to_string(card_1.number)+" "+card_1.suit);
         $("#opp-card-count").html(cards_player_1.length);
         $("#my-card").html(convert_value_to_string(card_2.number)+" "+card_2.suit);
@@ -132,11 +136,38 @@ $(document).on('turbolinks:load', function() {
         $('#card-id-player1').addClass(final_player_1_c_number);
         $('#card-id-player2').addClass(player_2_c_name);
         $('#card-id-player2').addClass(final_player_2_c_number);
+        if (you < opp) {
+          $('#my-card-count').addClass('text-warning');
+          $('#my-card-count').removeClass('text-success');
+        } else {
+          $('#my-card-count').addClass('text-success');
+          $('#my-card-count').removeClass('text-warning');
+        }
+        if (you > opp) {
+          $('#opp-card-count').addClass('text-warning');
+          $('#opp-card-count').removeClass('text-success');
+        } else {
+          $('#opp-card-count').addClass('text-success');
+          $('#opp-card-count').removeClass('text-warning');
+        }
       }
     }
     advance();
-    $(".btn").click(function() {
-      play();
+    $("#play-ball").click(function() {
+      if ($('#myModal1').length > 0) {
+        $('.result').removeClass('fa-thumbs-o-down fa-thumbs-o-down');
+        play();
+      }
+    });
+    $('[data-toggle=modal]').on('click', function (e) {
+        var $target = $($(this).data('target'));
+        $target.data('triggered',true);
+        setTimeout(function() {
+          if ($target.data('triggered')) {
+            $target.modal('show').data('triggered',false);
+          };
+        }, 700);
+      return false;
     });
   }
 });

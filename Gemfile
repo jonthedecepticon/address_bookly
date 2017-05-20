@@ -30,7 +30,7 @@ gem 'pry', '~> 0.10.4'
 gem 'awesome_print', '~> 1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'devise', '~> 4.2', '>= 4.2.1'
-gem 'jquery-turbolinks'
+gem 'jquery-turbolinks', '~> 2.1'
 gem 'turbolinks', '~> 5.0', '>= 5.0.1'
 
 

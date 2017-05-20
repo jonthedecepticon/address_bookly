@@ -1,5 +1,5 @@
-<div class="remove-alert">
-  <% flash.each do |message_type, message| %>
+<% flash.each do |message_type, message| %>
+  <div class="remove-alert">
     <% if message_type == "alert" %>
       <div class="alert alert-danger" role="alert">
         <div class="container">
@@ -27,5 +27,5 @@
         </div>
       </div>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
