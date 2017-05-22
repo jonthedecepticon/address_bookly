@@ -1,0 +1,153 @@
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+      <div class="page-header-image" data-parallax="true" style="background-image: url(<%= asset_path 'home-hero-img.jpg' %>);">
+      </div>
+      <div class="container">
+        <div class="content-center">
+          <div class="photo-container">
+            <%= image_tag "me.jpg", class: "rounded-circle img-raised" %>
+          </div>
+          <h3 class="title">Jon Lambson</h3>
+          <p class="category">Jr. Software Developer</p>
+          <div class="content">
+            <div class="social-description">
+            </div>
+            <div class="social-description">
+            </div>
+            <div class="social-description">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section bg-grad">
+      <div class="container">
+        <div class="button-container">
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-javascript-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-jquery-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-react-original"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-ruby-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-rails-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-angularjs-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-photoshop-line"></i>
+          </a>
+          <a href="/static_pages/resume" class="btn btn-primary btn-round btn-lg" rel="tooltip" title="Checkout My Resume">Skills</a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-illustrator-line"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-github-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-bootstrap-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-atom-original"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-nodejs-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-mongodb-plain"></i>
+          </a>
+          <a href="" class="btn btn-default btn-round btn-lg btn-icon no-click">
+            <i class="devicon-postgresql-plain"></i>
+          </a>
+        </div>
+        <div class="move-down">
+          <h3 class="title">About me</h3>
+          <h5 class="description">
+            <p>Distinctio nonummy, ultrices? Consectetuer, quibusdam lacinia tristique etiam? Culpa minus omnis totam excepteur eu cillum? Ratione vel, hac impedit ipsum maxime reiciendis? Minima ex curabitur.</p>
+            <p>Distinctio nonummy, ultrices? Consectetuer, quibusdam lacinia tristique etiam? Culpa minus omnis totam excepteur eu cillum? Ratione vel, hac impedit ipsum maxime reiciendis? Minima ex curabitur.</p>
+          </h5>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 panetab">
+            <h4 class="title text-center">My Portfolio</h4>
+            <div class="nav-align-center">
+              <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#page1" role="tablist">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content gallery">
+            <div class="tab-pane active" id="page1" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12 offset-md-2 move-left">
+                  <div class="row collections">
+                    <div class="col-md-6 side-projects-2by2">
+                      <a href="/404-page">
+                        <div class="box">
+                          <%= image_tag "404.png", class: "img-raised 404-img" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center text-primary">404 Page</h3>
+                          <p>Not a side project, just wanted to play around with the 404 page...</p>
+                          <p class="text-info">Built with Ruby/Rails/JavaScript</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #1</a></p>
+                      <a href="/contacts">
+                        <div class="box">
+                          <%= image_tag "contact.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center text-primary">Address Book</h3>
+                          <p>PostgreSQL as the database system. Ability to add, edit, and delete contacts. Ability to view all contacts in a list sorted alphabetically by name...</p>
+                          <p class="text-info">Built with Ruby on Rails</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #3</a></p>
+                    </div>
+                    <div class="col-md-6 side-projects-2by2">
+                      <a href="/card_game/war">
+                        <div class="box">
+                          <%= image_tag "cards.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center text-primary">War - Card Game</h3>
+                          <p>The deck is divided evenly, with each player receiving 26 cards, dealt one at a time, face down. Anyone may deal first. Each player places his stack of cards face down, in front of him...</p>
+                          <p class="text-info">Built with JavaScript</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">War - Card Game</a></p>
+                      <a href="/static_pages/coming_soon">
+                        <div class="box">
+                          <%= image_tag "bg7.jpg", class: "img-raised" %>
+                          <span class="caption fade-caption">
+                          <h3 class="text-center text-primary">Side Project #4</h3>
+                          <p>This will be a brief description of what the side project is...</p>
+                          <p class="text-info">Built with JavaScript</p>
+                          </span>
+                        </div>
+                      </a>
+                      <p class="text-center mobile-sd-title"><a href="/static_pages/coming_soon" class="btn btn-link btn-info">Side Project #4</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

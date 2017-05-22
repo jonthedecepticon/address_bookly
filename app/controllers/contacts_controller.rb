@@ -11,7 +11,8 @@ class ContactsController < ApplicationController
   end
 
   def new
-    @contact = current_user.contacts.build
+    # @contact = current_user.contacts.build
+    @contact = Contact.new
   end
 
   def edit

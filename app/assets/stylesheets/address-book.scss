@@ -1,0 +1,16 @@
+.-contacts {
+  .container.contact-things {
+    padding-top: 100px;
+    .tab-content .tab-pane p {
+      color: black;
+    }
+    ul.nav.nav-tabs.nav-tabs-neutral.justify-content-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li.nav-item h3{
+      margin-bottom: 0;
+    }
+  }
+}
